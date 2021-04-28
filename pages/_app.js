@@ -88,35 +88,6 @@ function App({ Component, pageProps }) {
             .main-title {
               font-family: "Bebas Neue", "Mulish", "Avenir", -system-ui;
             }
-            .button {
-              padding: 10px 15px;
-              position: relative;
-              font-weight: 800;
-              font-size: 2rem;
-              margin-top: 15px;
-              margin-left: auto;
-              margin-right: auto;
-              text-align: center;
-
-              color: #ffffff;
-              box-shadow: 0px 4px 30px rgba(255, 255, 255, 0.76);
-              border-radius: 5px;
-              background: linear-gradient(
-                90deg,
-                rgba(16, 226, 255, 0.8) -34.31%,
-                rgba(223, 154, 255, 0.8) 103.95%
-              );
-            }
-            .button:hover {
-              background: linear-gradient(
-                90deg,
-                rgba(16, 198, 255, 0.9) 50%,
-                rgba(218, 139, 255, 0.8) 94.43%
-              );
-              box-shadow: 0px 0px 30px 0px #0eb7ff8a;
-
-              border-radius: 10px;
-            }
             .section-title {
               font-family: "Bolden", "Mulish", "Avenir", -system-ui;
               font-weight: 900;
