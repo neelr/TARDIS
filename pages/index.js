@@ -3,16 +3,16 @@ import {
   Divider,
   Heading,
   Text,
-  HStack,
   Flex,
   Avatar,
   Image,
-  List,
-  ListItem,
-  ListIcon,
   Button,
+  InputLeftElement,
+  InputRightElement,
+  Input,
+  InputGroup,
 } from "@chakra-ui/react";
-import { FaExclamationTriangle } from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa";
 
 let Highlight = (props) => (
   <Text
@@ -40,6 +40,7 @@ const ColorButton = (props) => (
           rgba(218, 139, 255, 0.8) 94.43%
         )`,
         boxShadow: `0px 0px 30px 0px #0eb7ff8a`,
+        transform: "scale(1.06)",
       },
     }}
     css="padding: 25px 30px;
@@ -48,7 +49,7 @@ const ColorButton = (props) => (
     font-size: 1.5rem;
     margin-top: 15px;
     text-align: center;
-
+    transition: all 0.5s;
     color: #ffffff;
     box-shadow: 0px 4px 30px rgba(255, 255, 255, 0.76);
     border-radius: 5px;
@@ -161,7 +162,7 @@ export default function Main() {
         </Flex>
       </Box>
       <Divider my="30px" width="100%" mx="auto" />
-      <Box mx={["10px", "10vw", "20vw"]}>
+      <Box mx={["10px", "10vw", "15vw"]}>
         <Flex
           flexDir={["column", "row", "row"]}
           boxShadow="lg"
@@ -220,6 +221,71 @@ export default function Main() {
           >
             <Image
               src="/cad.png"
+              sx={{
+                gridColumn: 1,
+                gridRow: 1,
+                zIndex: 1,
+                pr: "13%",
+              }}
+            />
+            <Image
+              height="200px"
+              src="/dots.svg"
+              sx={{
+                gridColumn: 1,
+                pt: ["1%", "1%"],
+                pl: "20%",
+                gridRow: 1,
+              }}
+            />
+          </Box>
+        </Flex>
+        <Flex
+          flexDir={["column", "row", "row"]}
+          boxShadow="lg"
+          borderRadius="lg"
+          p="20px"
+          my="10px"
+        >
+          <Box my="auto">
+            <Heading mb="10px" fontSize={[25, 25, 35]}>
+              Okay. Is this just a{" "}
+              <Text
+                sx={{
+                  textDecor: "underline",
+                  textDecorationStyle: "wavy",
+                  textDecorationColor: "#F687B3",
+                }}
+                as="span"
+              >
+                theory
+              </Text>
+              ? 💭
+            </Heading>
+            <Text>
+              No! We've developed a prototype (on the right), which can
+              successfuly classify your state of mind with{" "}
+              <Highlight>over 92% accuracy</Highlight>. This accuracy is
+              projected to increase as we add more EEG inputs in our final
+              product. The prototype has been proven to work with our
+              experiments, and the AI allows it to be very accurate for 1 EEG
+              node. We are currently developing a second one that would be able
+              to be mass produced at large, as well as{" "}
+              <Highlight>building out cloud infrastructure at scale.</Highlight>{" "}
+              Currently we've built a working web app, that integrates with it,
+              along with AI workers that distrubute the workload from your
+              computer!
+            </Text>
+          </Box>
+          <Box
+            sx={{
+              display: "grid",
+              gridTemplateColumns: "repeat(1, 1)",
+              position: "relative",
+            }}
+          >
+            <Image
+              src="/prototype.png"
               sx={{
                 gridColumn: 1,
                 gridRow: 1,
@@ -435,6 +501,46 @@ export default function Main() {
           </Flex>
         </Box>
       </Box>
+      <Divider my="30px" width="100%" mx="auto" />
+      <Flex flexDir={["column-reverse", "row", "row"]}>
+        <Flex flex="1" my="auto" flexDir="column">
+          <InputGroup width="400px" mx="auto">
+            <InputLeftElement
+              pointerEvents="none"
+              children={<FaEnvelope color="gray.300" />}
+            />
+            <Input type="email" placeholder="Email" id="emailinp" />
+
+            <InputRightElement width="100px">
+              <Button
+                height="80%"
+                mr="5px"
+                px="5px"
+                size="md"
+                colorScheme="green"
+                onClick={() => {
+                  window.open(
+                    `https://airtable.com/shrXOdja6BATj6gBl?prefill_email=${
+                      document.getElementById("emailinp").value
+                    }`
+                  );
+                }}
+              >
+                Update Me!
+              </Button>
+            </InputRightElement>
+          </InputGroup>
+        </Flex>
+        <Flex flex="1" flexDir="column" mx="auto">
+          <Heading mx="auto" fontSize={[30, 40, 50]}>
+            Get Updates!
+          </Heading>
+          <Text mx="auto" width="75%">
+            Drop your email for updates. We promise not to spam! Get updates on
+            TARDIS, including recent developments, prototypes, and launch!
+          </Text>
+        </Flex>
+      </Flex>
       <Divider my="30px" width="100%" mx="auto" />
       <Flex flexDir={["column", "row", "row"]}>
         <Flex flex="1" my="auto" flexDir="column">
