@@ -34,7 +34,7 @@ const ColorButton = (props) => (
     sx={{
       fontWeight: "bold",
       ":hover": {
-        background: `background: linear-gradient(
+        background: `linear-gradient(
           90deg,
           rgba(16, 198, 255, 0.9) 30%,
           rgba(218, 139, 255, 0.8) 94.43%
