@@ -7,21 +7,20 @@ import {
   ButtonGroup,
   IconButton,
 } from "@chakra-ui/react";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaEnvelope, FaFilePowerpoint } from "react-icons/fa";
 import Nav from "../components/Nav";
 import { RecoilRoot } from "recoil";
+import Head from "next/head";
 
 function App({ Component, pageProps }) {
   return (
     <RecoilRoot>
       <ChakraProvider>
-        <Box
-          display="flex"
-          flexDir="column"
-          width="100vw"
-          minH="100vh"
-          overflow="hidden"
-        >
+        <Box display="flex" flexDir="column" width="100%" minH="100vh">
+          <Head>
+            <title>TARDIS</title>
+            <link rel="icon" href="/tardis.png" />
+          </Head>
           <Nav />
           <Component {...pageProps} />
           <Divider />
@@ -32,21 +31,21 @@ function App({ Component, pageProps }) {
             <ButtonGroup variant="ghost" color="gray.600" ml="auto">
               <IconButton
                 as="a"
-                href="#"
-                aria-label="LinkedIn"
-                icon={<FaLinkedin fontSize="20px" />}
+                href="/tardis-pitch.pptx"
+                aria-label="Pitch Deck"
+                icon={<FaFilePowerpoint fontSize="20px" />}
               />
               <IconButton
                 as="a"
-                href="#"
+                href="https://github.com/neelr/tardis"
                 aria-label="GitHub"
                 icon={<FaGithub fontSize="20px" />}
               />
               <IconButton
                 as="a"
-                href="#"
-                aria-label="Twitter"
-                icon={<FaTwitter fontSize="20px" />}
+                href="mailto:tardis@neelr.dev"
+                aria-label="Mail"
+                icon={<FaEnvelope fontSize="20px" />}
               />
             </ButtonGroup>
           </Flex>

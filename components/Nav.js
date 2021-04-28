@@ -7,7 +7,6 @@ import {
   useColorMode,
   Avatar,
 } from "@chakra-ui/react";
-import { SunIcon, MoonIcon } from "@chakra-ui/icons";
 import firebase from "../utils/firebase";
 import { userState } from "../utils/atoms";
 import { useRecoilState } from "recoil";
@@ -39,7 +38,6 @@ export default function Nav() {
         });
     }
   });
-  const { colorMode, toggleColorMode } = useColorMode();
   var provider = new firebase.auth.GoogleAuthProvider();
   provider.addScope("https://www.googleapis.com/auth/userinfo.profile");
 
@@ -91,14 +89,6 @@ export default function Nav() {
       >
         {user.name == null ? "Sign In" : "Sign Out"}
       </Button>
-      <IconButton
-        mx="5px"
-        mr="20px"
-        onClick={toggleColorMode}
-        aria-label="theme-change"
-        icon={colorMode === "light" ? <SunIcon /> : <MoonIcon />}
-        variant="outline"
-      />
     </Box>
   );
 }
