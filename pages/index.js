@@ -396,6 +396,42 @@ export default function Main() {
                 </Text>
               </Box>
             </Flex>
+            <Flex flexDir={["column", "row", "row"]} mx="auto">
+              <Box
+                boxShadow="lg"
+                borderRadius="lg"
+                p="20px"
+                m="10px"
+                flex="1"
+                className="card-glow"
+              >
+                <Heading fontSize={[25, 25, 35]} fontWeight="800">
+                  🍰 Personalized
+                </Heading>
+                <Text>
+                  We target our product to be customized per patient to make
+                  sure our electrodes, data, and habituation features have the
+                  most effect.
+                </Text>
+              </Box>
+              <Box
+                boxShadow="lg"
+                borderRadius="lg"
+                p="20px"
+                m="10px"
+                flex="1"
+                className="card-glow"
+              >
+                <Heading fontSize={[25, 25, 35]} fontWeight="800">
+                  🔊 Nudges
+                </Heading>
+                <Text>
+                  Get gentle reminders, analysis, and statistics of your past
+                  day, week, and month, to slowly adjust your habits and
+                  behaviors!
+                </Text>
+              </Box>
+            </Flex>
           </Flex>
         </Box>
       </Box>
