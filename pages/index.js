@@ -125,16 +125,27 @@ export default function Main() {
           we can{" "}
           <strong>impact the lives of people from all walks of life.</strong>
         </Text>
-        <Flex>
-          <Button
-            href="http://u.filein.io/VLQKvYkqtd.pdf"
-            as="a"
-            target="_blank"
-            fontWeight="800"
-            className="button"
-          >
-            Our Pitch Deck
-          </Button>
+        <Flex className="buttons">
+          <Flex fontWeight="900">
+            <Button
+              href="http://u.filein.io/7gH97MuzCB.pdf"
+              as="a"
+              target="_blank"
+              className="button"
+            >
+              Our Pitch Deck
+            </Button>
+          </Flex>
+          <Flex fontWeight="900">
+            <Button
+              href="https://docs.google.com/document/d/e/2PACX-1vQ9Hf1-UrvaBr8aTfuq72pqFgz-dLeZ3KDqXyv8NUVz3rQ13aCFMXnxMDVQXFoXyj_rMS547IxzBc7w/pub"
+              as="a"
+              target="_blank"
+              className="button"
+            >
+              Whitepaper
+            </Button>
+          </Flex>
         </Flex>
       </Box>
       <Divider my="30px" width="100%" mx="auto" />
@@ -183,7 +194,7 @@ export default function Main() {
                 target="_blank"
                 as="a"
               >
-                whitepaper supported by multiple research studies
+                whitepaper we wrote, supported by multiple research studies
               </Text>
               .
             </Text>
@@ -300,12 +311,11 @@ export default function Main() {
             </Text>
             ?
           </Heading>
-          <Text>
+          <Text fontSize={[15, 15, 18]} paddingBelow="15px">
             Our competitors are a whack-a-mole game of having to choose between
             something <strong>inneffective</strong>, <strong>invasive</strong>,
-            and <strong>expensive</strong>
+            and <strong>expensive</strong>. TARDIS does much better by being...
           </Text>
-          <Text fontWeight="bold">TARDIS does much better by being</Text>
           <Flex flexDir="column">
             <Flex flexDir={["column", "row", "row"]} mx="auto">
               <Box
