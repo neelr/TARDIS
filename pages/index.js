@@ -25,23 +25,41 @@ let Highlight = (props) => (
   />
 );
 
-const NumberIcon = (props) => (
-  <Box
-    width="40px"
-    borderRadius="100px"
-    height="40px"
-    bg="blue.400"
-    fontWeight="bold"
-    textAlign="center"
-    display="flex"
-    mx="auto"
-    color="white"
-    my="10px"
-  >
-    <Text m="auto" {...props} />
-  </Box>
-);
+const ColorButton = (props) => (
+  <Button
+    as="a"
+    target="_blank"
+    className="button"
+    p="10px"
+    sx={{
+      fontWeight: "bold",
+      ":hover": {
+        background: `background: linear-gradient(
+          90deg,
+          rgba(16, 198, 255, 0.9) 30%,
+          rgba(218, 139, 255, 0.8) 94.43%
+        )`,
+        boxShadow: `0px 0px 30px 0px #0eb7ff8a`,
+      },
+    }}
+    css="padding: 25px 30px;
+    position: relative;
+    font-weight: 900 !important;
+    font-size: 1.5rem;
+    margin-top: 15px;
+    text-align: center;
 
+    color: #ffffff;
+    box-shadow: 0px 4px 30px rgba(255, 255, 255, 0.76);
+    border-radius: 5px;
+    background: linear-gradient(
+      90deg,
+      #0fe1ff -34.31%,
+      #de9aff 103.95%
+    );"
+    {...props}
+  />
+);
 const TeamMember = ({ name, title, src, ...props }) => (
   <Flex
     boxShadow="md"
@@ -125,43 +143,21 @@ export default function Main() {
           we can{" "}
           <strong>impact the lives of people from all walks of life.</strong>
         </Text>
-        <Flex>
-          <Button
+        <Flex flexDir={["column", "row", "row"]}>
+          <ColorButton
+            ml="auto"
+            mr={["auto", "10px", "10px"]}
             href="http://u.filein.io/VLQKvYkqtd.pdf"
-            as="a"
-            target="_blank"
-            className="button"
-            p="10px"
-            sx={{
-              fontWeight: "bold",
-              ":hover": {
-                background: `linear-gradient(
-                  90deg,
-                  rgba(16, 198, 255, 0.9) 50%,
-                  rgba(218, 139, 255, 0.8) 94.43%
-                )`,
-                boxShadow: `0px 0px 30px 0px #0eb7ff8a`,
-              },
-            }}
-            css="padding: 30px;
-            font-weight: 800;
-            font-size: 2rem;
-            margin-top: 15px;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
-
-            color: #ffffff;
-            box-shadow: 0px 4px 30px rgba(255, 255, 255, 0.76);
-            border-radius: 5px;
-            background: linear-gradient(
-              90deg,
-              rgba(16, 226, 255, 0.8) -34.31%,
-              rgba(223, 154, 255, 0.8) 103.95%
-            );"
           >
             Our Pitch Deck
-          </Button>
+          </ColorButton>
+          <ColorButton
+            mr="auto"
+            ml={["auto", "10px", "10px"]}
+            href="https://docs.google.com/document/d/e/2PACX-1vQ9Hf1-UrvaBr8aTfuq72pqFgz-dLeZ3KDqXyv8NUVz3rQ13aCFMXnxMDVQXFoXyj_rMS547IxzBc7w/pub"
+          >
+            Whitepaper
+          </ColorButton>
         </Flex>
       </Box>
       <Divider my="30px" width="100%" mx="auto" />
@@ -210,7 +206,7 @@ export default function Main() {
                 target="_blank"
                 as="a"
               >
-                whitepaper supported by multiple research studies
+                whitepaper we wrote, supported by multiple research studies
               </Text>
               .
             </Text>
@@ -327,12 +323,11 @@ export default function Main() {
             </Text>
             ?
           </Heading>
-          <Text>
+          <Text fontSize={[15, 15, 18]} paddingBelow="15px">
             Our competitors are a whack-a-mole game of having to choose between
             something <strong>inneffective</strong>, <strong>invasive</strong>,
-            and <strong>expensive</strong>
+            and <strong>expensive</strong>. TARDIS does much better by being...
           </Text>
-          <Text fontWeight="bold">TARDIS does much better by being</Text>
           <Flex flexDir="column">
             <Flex flexDir={["column", "row", "row"]} mx="auto">
               <Box

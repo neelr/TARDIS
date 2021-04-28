@@ -88,6 +88,37 @@ function App({ Component, pageProps }) {
             .main-title {
               font-family: "Bebas Neue", "Mulish", "Avenir", -system-ui;
             }
+            .buttons {
+              margin-left: auto;
+              margin-right: auto;
+              position: relative;
+              justify-content: center;
+            }
+            .button {
+              padding: 25px 30px;
+              position: relative;
+              font-weight: 900 !important;
+              font-size: 1.5rem;
+              margin-top: 15px;
+              text-align: center;
+
+              color: #ffffff;
+              box-shadow: 0px 4px 30px rgba(255, 255, 255, 0.76);
+              border-radius: 5px;
+              background: linear-gradient(
+                90deg,
+                #0fe1ff -34.31%,
+                #de9aff 103.95%
+              );
+            }
+            .button:hover {
+              background: linear-gradient(
+                90deg,
+                rgba(16, 198, 255, 0.9) 30%,
+                rgba(218, 139, 255, 0.8) 94.43%
+              );
+              box-shadow: 0px 0px 30px 0px #0eb7ff8a;
+            }
             .section-title {
               font-family: "Bolden", "Mulish", "Avenir", -system-ui;
               font-weight: 900;
@@ -100,6 +131,7 @@ function App({ Component, pageProps }) {
               box-shadow: 0px 0px 20px 0px #10e2ff33;
             }
             .team:hover {
+              opacity: 80%;
               box-shadow: 0px 0px 30px 0px #10e2ff54;
             }
           `}</style>
