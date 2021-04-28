@@ -35,7 +35,7 @@ function App({ Component, pageProps }) {
             />
             <meta
               property="og:image"
-              content="https://tardisapp.usassets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"
+              content="https://tardisapp.us/ogimage.png"
             />
 
             <meta property="twitter:card" content="summary_large_image" />
@@ -47,7 +47,7 @@ function App({ Component, pageProps }) {
             />
             <meta
               property="twitter:image"
-              content="https://tardisapp.usassets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"
+              content="https://tardisapp.us/ogimage.png"
             />
           </Head>
           <Nav />
@@ -60,8 +60,9 @@ function App({ Component, pageProps }) {
             <ButtonGroup variant="ghost" color="gray.600" ml="auto">
               <IconButton
                 as="a"
-                href="/tardis-pitch.pptx"
+                href="http://u.filein.io/VLQKvYkqtd.pdf"
                 aria-label="Pitch Deck"
+                target="_blank"
                 icon={<FaFilePowerpoint fontSize="20px" />}
               />
               <IconButton

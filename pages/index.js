@@ -127,7 +127,7 @@ export default function Main() {
         </Text>
         <Flex>
           <Button
-            href="#"
+            href="http://u.filein.io/VLQKvYkqtd.pdf"
             as="a"
             target="_blank"
             fontWeight="800"
