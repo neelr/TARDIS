@@ -140,8 +140,8 @@ export default function Main() {
         >
           TARDIS is our response to the{" "}
           <strong>widespread pandemic of mental health </strong>
-          of today. By enhancing every aspect of your day to be higher-quality,
-          we can{" "}
+          of today. By creating a <strong>low cost neuro headset</strong> to
+          monitor and modulate your brain, we can{" "}
           <strong>impact the lives of people from all walks of life.</strong>
         </Text>
         <Flex flexDir={["column", "row", "row"]}>
@@ -554,6 +554,15 @@ export default function Main() {
         </Flex>
         <Flex flex="1" flexDir="column" mx="auto">
           <TeamMember
+            name="Neel Redkar"
+            title="AI Development/Researcher and Full Stack Developer"
+            src="/neel.png"
+            as="a"
+            href="https://neelr.dev"
+            className="card-glow"
+            className="team"
+          />
+          <TeamMember
             name="Claire Wang"
             title="Neuroscience Researcher at UCLA and Hardware Designer"
             src="/claire.jpeg"
@@ -577,15 +586,6 @@ export default function Main() {
             src="/andrew.png"
             as="a"
             href="https://andrewgao.dev"
-            className="card-glow"
-            className="team"
-          />
-          <TeamMember
-            name="Neel Redkar"
-            title="AI Development/Researcher and Full Stack Developer"
-            src="/neel.png"
-            as="a"
-            href="https://neelr.dev"
             className="card-glow"
             className="team"
           />
